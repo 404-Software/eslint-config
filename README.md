@@ -22,3 +22,9 @@
 },
 "eslint.validate": ["javascript", "typescript", "javascriptreact", "typescriptreact"]
 ```
+
+</br>
+</br>
+</br>
+
+Note: To lint all the project files, run `eslint . --ext .ts --ext .tsx --fix`
