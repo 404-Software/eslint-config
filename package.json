@@ -1,11 +1,13 @@
 {
 	"name": "@404web/eslint-config",
-	"version": "1.0.5",
+	"version": "1.0.7",
 	"license": "MIT",
 	"main": "index.js",
 	"dependencies": {
 		"@typescript-eslint/eslint-plugin": "^5.0.0",
 		"@typescript-eslint/parser": "^5.0.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^4.0.0",
 		"eslint-plugin-react": "^7.26.1",
 		"eslint-plugin-react-hooks": "^4.2.0",
 		"eslint-plugin-sort-imports-es6-autofix": "^0.6.0",

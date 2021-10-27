@@ -2,8 +2,8 @@ module.exports = {
 	root: true,
 	parser: '@typescript-eslint/parser',
 	parserOptions: { ecmaFeatures: { jsx: true } },
-	plugins: ['sort-imports-es6-autofix', '@typescript-eslint', 'react', 'react-hooks'],
-	extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
+	plugins: ['sort-imports-es6-autofix', '@typescript-eslint', 'react', 'react-hooks', 'prettier'],
+	extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
 	rules: {
 		// https://eslint.org/docs/rules/no-template-curly-in-string
 		'no-template-curly-in-string': 'warn',
