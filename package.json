@@ -1,6 +1,6 @@
 {
 	"name": "@404web/eslint-config",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"license": "MIT",
 	"main": "index.js",
 	"dependencies": {
@@ -16,5 +16,9 @@
 	"peerDependencies": {
 		"eslint": "^6 || ^7.2.0",
 		"prettier": ">= 1.13"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.2.0",
+		"@typescript-eslint/parser": "^5.2.0"
 	}
 }

@@ -1,6 +1,12 @@
 module.exports = {
-	extends: ['airbnb', 'plugin:prettier/recommended'],
-	plugins: ['simple-import-sort'],
+	extends: [
+		'airbnb',
+		'plugin:prettier/recommended',
+		'plugin:@typescript-eslint/eslint-recommended',
+		'plugin:@typescript-eslint/recommended',
+	],
+	parser: '@typescript-eslint/parser',
+	plugins: ['simple-import-sort', '@typescript-eslint'],
 	rules: {
 		'class-methods-use-this': 'off',
 		'import/prefer-default-export': 'off',
