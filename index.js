@@ -125,7 +125,7 @@ module.exports = {
 				tabWidth: 2,
 				semi: false,
 				jsxSingleQuote: true,
-				printWidth: 120,
+				printWidth: 80,
 			},
 		],
 	},
