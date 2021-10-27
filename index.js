@@ -1,20 +1,123 @@
 module.exports = {
-	extends: [
-		'airbnb',
-		'plugin:prettier/recommended',
-		'plugin:@typescript-eslint/eslint-recommended',
-		'plugin:@typescript-eslint/recommended',
-	],
+	root: true,
 	parser: '@typescript-eslint/parser',
-	plugins: ['simple-import-sort', '@typescript-eslint'],
+	parserOptions: { ecmaFeatures: { jsx: true } },
+	plugins: ['sort-imports-es6-autofix', '@typescript-eslint', 'react', 'react-hooks'],
+	extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
 	rules: {
-		'class-methods-use-this': 'off',
-		'import/prefer-default-export': 'off',
-		'no-plusplus': 'off',
-		'no-restricted-globals': 'off',
+		// https://eslint.org/docs/rules/no-template-curly-in-string
+		'no-template-curly-in-string': 'warn',
+
+		// https://eslint.org/docs/rules/eqeqeq
+		eqeqeq: ['warn', 'smart'],
+
+		// https://eslint.org/docs/rules/no-empty-pattern
+		'no-empty-pattern': 'off',
+
+		// https://eslint.org/docs/rules/no-useless-catch
+		'no-useless-catch': 'off',
+
+		// https://eslint.org/docs/rules/eol-last
+		'eol-last': ['warn', 'always'],
+
+		// https://eslint.org/docs/rules/max-len
+		'max-len': [
+			'warn',
+			{
+				code: 80,
+				tabWidth: 2,
+				ignoreUrls: true,
+				ignoreStrings: true,
+				ignoreTemplateLiterals: true,
+			},
+		],
+
+		// https://eslint.org/docs/rules/no-const-assign
+		'no-const-assign': 'error',
+
+		// https://eslint.org/docs/rules/no-duplicate-imports
+		'no-duplicate-imports': 'error',
+
+		// https://eslint.org/docs/rules/no-var
+		'no-var': 'warn',
+
+		// https://eslint.org/docs/rules/prefer-const
+		'prefer-const': ['warn', { destructuring: 'all' }],
+
+		// https://eslint.org/docs/rules/prefer-template
+		'prefer-template': 'warn',
+
+		'@typescript-eslint/array-type': ['warn', { default: 'array-simple' }],
+		'@typescript-eslint/no-empty-interface': 'off',
+		'@typescript-eslint/prefer-optional-chain': 'warn',
+
+		'@typescript-eslint/explicit-module-boundary-types': 'off',
+		'@typescript-eslint/no-var-requires': 'off',
+		'@typescript-eslint/ban-types': 'off',
+
+		// Extensions rules of eslint
+		// Some eslint rules break when used in typescript
+		// @typescript-eslint offer replacements for these rules
+		// the original eslint rules must be disabled for them however
+
+		// https://eslint.org/docs/rules/no-unused-vars
+		'no-unused-vars': 'off',
+		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md
+		'@typescript-eslint/no-unused-vars': [
+			'warn',
+			{
+				vars: 'all',
+				args: 'none',
+				ignoreRestSiblings: true,
+				caughtErrors: 'none',
+				varsIgnorePattern: '^_+$',
+			},
+		],
+
+		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-assertion.md
+		'@typescript-eslint/no-non-null-assertion': 'off',
+
+		'react/button-has-type': ['warn'],
+		'react/jsx-boolean-value': 'warn',
+		'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.tsx'] }],
+		'react/jsx-key': ['warn'],
+		'react/jsx-max-depth': ['warn', { max: 5 }],
+		'react/jsx-no-duplicate-props': ['warn'],
+		// TEAWIOGHWIEGHWAOG
+		'react/jsx-sort-props': [
+			'warn',
+			{
+				reservedFirst: true,
+				noSortAlphabetically: true,
+				shorthandLast: true,
+				callbacksLast: true,
+			},
+		],
+		'react/jsx-no-target-blank': ['warn'],
+		'react/no-children-prop': ['warn'],
+		'react/no-deprecated': ['warn'],
+		'react/no-unknown-property': ['warn'],
+		'react/no-direct-mutation-state': ['warn'],
+		'react/no-unused-state': ['warn'],
+		// React hooks
+		'react-hooks/rules-of-hooks': 'warn',
+		'react-hooks/exhaustive-deps': 'warn',
+
+		'sort-imports': 'off',
+		'sort-imports-es6-autofix/sort-imports-es6': [
+			'warn',
+			{
+				ignoreCase: true,
+				ignoreMemberSort: false,
+				memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+			},
+		],
 		'prettier/prettier': [
 			'error',
 			{
+				bracketSameLine: false,
+				arrowParens: 'avoid',
+				quoteProps: 'as-needed',
 				singleQuote: true,
 				trailingComma: 'all',
 				useTabs: true,
@@ -25,12 +128,6 @@ module.exports = {
 				printWidth: 120,
 			},
 		],
-		radix: 'off',
-		'no-unused-vars': 'warn',
-		'class-methods-use-this': 'off',
-		'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
-		'no-use-before-define': 'off',
-		quotes: ['error', 'single'],
-		'jsx-quotes': ['error', 'prefer-single'],
 	},
+	env: { node: true, browser: true },
 }
