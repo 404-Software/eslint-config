@@ -1,18 +1,15 @@
-1- Run `yarn add -D @404web/eslint-config eslint prettier`
+1- Run `yarn add -D @404web/eslint-config eslint prettier && yarn global add eslint`
 </br>
 </br>
-2- Run `yarn global add eslint`
-</br>
-</br>
-3- Add this to the `package.json` in the project's root 
+2- Add this to the `package.json` in the project's root 
 ```json
 "eslintConfig": { "extends": "@404web/eslint-config" }
 ```
 </br>
-4- Install *eslint* and *prettier* VS Code Extentions
+3- Install *eslint* and *prettier* VS Code Extentions
 </br>
 </br>
-5- Open VS Code user settings and add the following
+4- Open VS Code user settings and add the following
 </br>
 </br>
 
