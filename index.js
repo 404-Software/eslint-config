@@ -61,7 +61,7 @@ module.exports = {
 		// the original eslint rules must be disabled for them however
 
 		// https://eslint.org/docs/rules/no-unused-vars
-		'no-unused-vars': 'off',
+		'no-unused-vars': 'warn',
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md
 		'@typescript-eslint/no-unused-vars': [
 			'warn',
