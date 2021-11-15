@@ -1,5 +1,5 @@
 {
-	"name": "@404web/eslint-config",
+	"name": "@404-software/eslint-config",
 	"version": "1.0.10",
 	"license": "MIT",
 	"main": "index.js",
