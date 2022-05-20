@@ -101,7 +101,7 @@ module.exports = {
 		'react/no-unused-state': ['warn'],
 		// React hooks
 		'react-hooks/rules-of-hooks': 'warn',
-		'react-hooks/exhaustive-deps': 'warn',
+		'react-hooks/exhaustive-deps': 'off',
 
 		'sort-imports': 'off',
 		'sort-imports-es6-autofix/sort-imports-es6': [
