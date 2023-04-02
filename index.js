@@ -81,7 +81,6 @@ module.exports = {
 		'react/jsx-boolean-value': 'warn',
 		'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.tsx'] }],
 		'react/jsx-key': ['warn'],
-		'react/jsx-max-depth': ['warn', { max: 8 }],
 		'react/jsx-no-duplicate-props': ['warn'],
 		// TEAWIOGHWIEGHWAOG
 		'react/jsx-sort-props': [
