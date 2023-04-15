@@ -2,7 +2,7 @@ module.exports = {
 	root: true,
 	parser: '@typescript-eslint/parser',
 	parserOptions: { ecmaFeatures: { jsx: true } },
-	plugins: ['sort-imports-es6-autofix', '@typescript-eslint', 'react', 'react-hooks', 'prettier'],
+	plugins: ['sort-imports-es6-autofix', '@typescript-eslint', 'react', 'react-hooks', 'prettier', 'sort-keys-fix'],
 	extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
 	rules: {
 		// https://eslint.org/docs/rules/no-template-curly-in-string
@@ -129,6 +129,8 @@ module.exports = {
         endOfLine: 'auto'
 			},
 		],
+
+    'sort-keys-fix/sort-keys-fix': 'warn'
 	},
 	env: { node: true, browser: true },
 }
