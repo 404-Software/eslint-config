@@ -1,5 +1,5 @@
 1- Run 
-```json 
+```console 
 yarn add -D @404-software/eslint-config eslint prettier
 ```
 </br>
