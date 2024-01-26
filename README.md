@@ -1,6 +1,6 @@
 1- Run 
 ```console 
-yarn add -D @404-software/eslint-config eslint prettier
+yarn add -D @404-software/eslint-config eslint@8.18.0 prettier@2.7.1
 ```
 </br>
 
