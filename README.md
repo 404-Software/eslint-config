@@ -1,5 +1,5 @@
 1- Run 
-```yarn add -D @404-software/eslint-config eslint prettier && yarn global add eslint```
+```json yarn add -D @404-software/eslint-config eslint prettier```
 </br>
 </br>
 2- Add this to the `package.json` in the project's root 
