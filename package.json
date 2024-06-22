@@ -1,14 +1,15 @@
 {
 	"name": "@404-software/eslint-config",
-	"version": "1.0.15",
+	"version": "1.0.18",
 	"license": "MIT",
 	"main": "index.js",
 	"dependencies": {
 		"@typescript-eslint/eslint-plugin": "^5.0.0",
 		"@typescript-eslint/parser": "^5.0.0",
 		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-canonical": "^4.2.1",
 		"eslint-plugin-prettier": "^4.0.0",
-		"eslint-plugin-react": "^7.26.1",
+		"eslint-plugin-react": "^7.32.2",
 		"eslint-plugin-react-hooks": "^4.2.1-alpha-4298ddbc5-20211023",
 		"eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
 		"typescript": "^4.4.4"
@@ -16,8 +17,5 @@
 	"peerDependencies": {
 		"eslint": "^8.1.0",
 		"prettier": "^2.4.1"
-	},
-	"devDependencies": {
-		"eslint-plugin-sort-keys-fix": "^1.1.2"
 	}
 }

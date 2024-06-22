@@ -2,7 +2,7 @@ module.exports = {
 	root: true,
 	parser: '@typescript-eslint/parser',
 	parserOptions: { ecmaFeatures: { jsx: true } },
-	plugins: ['sort-imports-es6-autofix', '@typescript-eslint', 'react', 'react-hooks', 'prettier', 'sort-keys-fix'],
+	plugins: ['sort-imports-es6-autofix', '@typescript-eslint', 'react', 'react-hooks', 'prettier', 'canonical'],
 	extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
 	rules: {
 		// https://eslint.org/docs/rules/no-template-curly-in-string
@@ -87,7 +87,6 @@ module.exports = {
 			'warn',
 			{
 				reservedFirst: true,
-				noSortAlphabetically: true,
 				shorthandLast: true,
 				callbacksLast: true,
 			},
@@ -111,26 +110,33 @@ module.exports = {
 				memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
 			},
 		],
-    'no-console': 'warn',
+		'no-console': 'warn',
 		'prettier/prettier': [
 			'error',
 			{
 				bracketSameLine: false,
 				arrowParens: 'avoid',
 				quoteProps: 'as-needed',
-				singleQuote: true,
+				singleQuote: false,
 				trailingComma: 'all',
 				useTabs: true,
 				bracketSpacing: true,
 				tabWidth: 2,
-				semi: false,
-				jsxSingleQuote: true,
-				printWidth: 80,
-        endOfLine: 'auto'
+				semi: true,
+				jsxSingleQuote: false,
+				printWidth: 120,
+				endOfLine: 'auto',
 			},
 		],
 
-    'sort-keys-fix/sort-keys-fix': 'warn'
+		'canonical/sort-keys': [
+			2,
+			'asc',
+			{
+				caseSensitive: false,
+				natural: true,
+			},
+		],
 	},
 	env: { node: true, browser: true },
 }
