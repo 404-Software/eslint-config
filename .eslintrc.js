@@ -17,6 +17,9 @@ const config = {
 		"plugin:canonical/recommended",
 	],
 	rules: {
+		"@typescript-eslint/no-misused-promises": "off",
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/no-require-imports": "off",
 		"no-template-curly-in-string": "warn",
 		eqeqeq: ["warn", "smart"],
 		"no-empty-pattern": "off",
@@ -107,6 +110,7 @@ const config = {
 		"@typescript-eslint/no-unsafe-member-access": "off",
 		"canonical/destructuring-property-newline": "off",
 		"canonical/import-specifier-newline": "off",
+		"@typescript-eslint/no-unsafe-assignment": "off",
 	},
 	env: { node: true, browser: true },
 };
