@@ -103,6 +103,10 @@ const config = {
 				endOfLine: "auto",
 			},
 		],
+		"@typescript-eslint/no-unsafe-call": "off",
+		"@typescript-eslint/no-unsafe-member-access": "off",
+		"canonical/destructuring-property-newline": "off",
+		"canonical/import-specifier-newline": "off",
 	},
 	env: { node: true, browser: true },
 };
