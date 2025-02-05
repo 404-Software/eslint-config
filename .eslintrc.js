@@ -111,6 +111,7 @@ const config = {
 		"canonical/destructuring-property-newline": "off",
 		"canonical/import-specifier-newline": "off",
 		"@typescript-eslint/no-unsafe-assignment": "off",
+		"@typescript-eslint/no-unsafe-return": "off",
 	},
 	env: { node: true, browser: true },
 };
