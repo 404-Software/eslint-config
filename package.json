@@ -1,9 +1,9 @@
 {
 	"name": "@404-software/eslint-config",
-	"version": "1.0.24",
+	"version": "1.0.25",
 	"license": "MIT",
 	"main": "index.js",
-	"devDependencies": {
+	"dependencies": {
 		"@typescript-eslint/eslint-plugin": "^8.23.0",
 		"@typescript-eslint/parser": "^8.23.0",
 		"eslint-config-prettier": "^10.0.1",
